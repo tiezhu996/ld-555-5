@@ -1,6 +1,6 @@
 const DB_NAME = 'ggarena-db';
-const DB_VERSION = 1;
-const STORES = ['teams', 'tournaments', 'players', 'matches'] as const;
+const DB_VERSION = 2;
+const STORES = ['teams', 'tournaments', 'players', 'matches', 'reviews'] as const;
 
 type StoreName = (typeof STORES)[number];
 

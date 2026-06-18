@@ -2,7 +2,7 @@ import { GameTitle, PlayerRank, TournamentFormat, TournamentStatus } from '../co
 import type { Match } from '../types/match';
 import type { Player } from '../types/player';
 import type { Team } from '../types/team';
-import type { Tournament } from '../types/tournament';
+import type { Tournament, TournamentReview } from '../types/tournament';
 
 export const mockPlayers: Player[] = [
   { id: 'p-01', username: 'NullFlash', avatar: 'NF', bio: '主打控图和残局处理。', mainGame: GameTitle.CSGO, rank: PlayerRank.GRANDMASTER, score: 3820, teams: ['team-01'], matchHistory: ['m-01', 'm-08'], onlineStatus: 'online' },
@@ -54,4 +54,15 @@ export const mockMatches: Match[] = [
   { id: 'm-08', tournamentId: 'tour-08', teamA: 'team-04', teamB: 'team-08', score: { a: 1, b: 2 }, winner: 'team-08', playedAt: '2026-05-24T21:00:00.000Z', mvp: 'p-08' },
   { id: 'm-09', tournamentId: 'tour-09', teamA: 'team-02', teamB: 'team-09', score: { a: 2, b: 0 }, winner: 'team-02', playedAt: '2026-05-15T20:00:00.000Z', mvp: 'p-02' },
   { id: 'm-10', tournamentId: 'tour-10', teamA: 'team-05', teamB: 'team-10', score: { a: 68, b: 54 }, winner: 'team-05', playedAt: '2026-05-02T22:00:00.000Z', mvp: 'p-05' },
+];
+
+export const mockReviews: TournamentReview[] = [
+  { id: 'rev-01', tournamentId: 'tour-04', teamId: 'team-04', reviewerId: 'p-04', score: 4, comment: '组织不错，赛程紧凑，裁判公正。', createdAt: '2026-06-13T10:00:00.000Z' },
+  { id: 'rev-02', tournamentId: 'tour-04', teamId: 'team-08', reviewerId: 'p-08', score: 3, comment: '地图池偏少，希望下次增加Ban/Pick。', createdAt: '2026-06-13T12:00:00.000Z' },
+  { id: 'rev-03', tournamentId: 'tour-08', teamId: 'team-04', reviewerId: 'p-04', score: 5, comment: '双败赛制很公平，复盘课超值。', createdAt: '2026-05-26T09:00:00.000Z' },
+  { id: 'rev-04', tournamentId: 'tour-08', teamId: 'team-08', reviewerId: 'p-08', score: 4, comment: '赛程安排合理，败者组节奏稍快。', createdAt: '2026-05-26T11:00:00.000Z' },
+  { id: 'rev-05', tournamentId: 'tour-09', teamId: 'team-02', reviewerId: 'p-02', score: 4, comment: '氛围好，对手强，学到了不少。', createdAt: '2026-05-16T14:00:00.000Z' },
+  { id: 'rev-06', tournamentId: 'tour-09', teamId: 'team-09', reviewerId: 'p-09', score: 3, comment: '地图轮换不太合理，建议调整。', createdAt: '2026-05-16T16:00:00.000Z' },
+  { id: 'rev-07', tournamentId: 'tour-10', teamId: 'team-05', reviewerId: 'p-05', score: 5, comment: '三日赛制很过瘾，积分透明。', createdAt: '2026-05-03T08:00:00.000Z' },
+  { id: 'rev-08', tournamentId: 'tour-10', teamId: 'team-10', reviewerId: 'p-10', score: 2, comment: '匹配差距大，体验一般。', createdAt: '2026-05-03T10:00:00.000Z' },
 ];

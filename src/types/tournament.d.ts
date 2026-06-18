@@ -11,6 +11,16 @@ export interface BracketRound {
   }>;
 }
 
+export interface TournamentReview {
+  id: string;
+  tournamentId: string;
+  teamId: string;
+  reviewerId: string;
+  score: number;
+  comment: string;
+  createdAt: string;
+}
+
 export interface Tournament {
   id: string;
   name: string;

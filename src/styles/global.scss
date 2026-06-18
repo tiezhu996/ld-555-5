@@ -76,6 +76,31 @@ p { color: var(--muted); line-height: 1.7; }
 .table-list { border: 1px solid var(--line); border-radius: 8px; padding: 0 18px; background: var(--surface); }
 .table-row .team-card { box-shadow: none; border: 0; background: transparent; padding: 0; min-width: 260px; }
 .empty-state { padding: 24px; text-align: center; }
+.review-form { display: grid; gap: 14px; margin-top: 14px; }
+.review-form h3 { margin: 0; }
+.review-form__stars { display: flex; align-items: center; gap: 4px; }
+.review-form__star { background: transparent; border: none; color: var(--muted); cursor: pointer; padding: 2px; transition: color .15s ease, transform .15s ease; }
+.review-form__star:hover { transform: scale(1.15); }
+.review-form__star.is-active { color: var(--accent); }
+.review-form__score-label { margin-left: 10px; color: var(--muted); font-size: 14px; }
+.review-form__actions { display: flex; gap: 10px; }
+.review-submitted { color: var(--accent); font-weight: 700; }
+.review-section { margin-top: 18px; }
+.review-summary { display: flex; align-items: center; gap: 6px; color: var(--accent); font-size: 15px; }
+.review-summary__star { color: var(--accent); }
+.review-list { display: grid; gap: 12px; }
+.review-item { padding: 14px 0; border-bottom: 1px solid var(--line); }
+.review-item:last-child { border-bottom: none; }
+.review-item__header { display: flex; align-items: center; gap: 10px; flex-wrap: wrap; }
+.review-item__author { font-weight: 700; color: var(--text); }
+.review-item__team { color: var(--muted); font-size: 13px; }
+.review-item__score { display: inline-flex; gap: 1px; color: var(--accent); }
+.review-item__star--filled { color: var(--accent); }
+.review-item__star--empty { color: var(--line); }
+.review-item__comment { margin: 6px 0 4px; color: var(--muted); line-height: 1.6; }
+.review-item__date { font-size: 12px; color: var(--muted); }
+.review-item__tournament-link { font-weight: 700; color: var(--accent); }
+.review-item__score-badge { display: inline-flex; align-items: center; background: color-mix(in srgb, var(--accent) 14%, var(--surface)); color: var(--accent); border-radius: 999px; padding: 3px 10px; font-size: 13px; font-weight: 700; }
 .toast { position: fixed; right: 18px; bottom: 18px; z-index: 30; background: var(--accent); color: var(--bg); border-radius: 8px; padding: 13px 16px; font-weight: 900; box-shadow: var(--shadow); }
 .toast--error { background: var(--danger); color: white; }
 @media (max-width: 760px) {

@@ -8,6 +8,7 @@ import { seedDatabase } from './mock/seed';
 import { useChatStore } from './stores/chatStore';
 import { useMatchStore } from './stores/matchStore';
 import { usePlayerStore } from './stores/playerStore';
+import { useReviewStore } from './stores/reviewStore';
 import { useTeamStore } from './stores/teamStore';
 import { useTournamentStore } from './stores/tournamentStore';
 
@@ -31,6 +32,7 @@ export function App() {
         useTournamentStore.getState().loadTournaments(),
         usePlayerStore.getState().loadPlayers(),
         useMatchStore.getState().loadMatches(),
+        useReviewStore.getState().loadReviews(),
       ]);
     });
   }, []);
